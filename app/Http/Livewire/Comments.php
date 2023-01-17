@@ -40,12 +40,14 @@ class Comments extends Component
         ]);
         $this->comments->prepend($createdComment);
         $this->newComment = '';
+        session()->flash('message', 'Comment successfully Added.');
     }
 
     public function remove($commentId)
     {
         $comment = Comment::find($commentId);
         $this->comments = $this->comments->except($commentId);
+        session()->flash('message', 'Comment deleted Successfully.');
     }
 
     public function render()
