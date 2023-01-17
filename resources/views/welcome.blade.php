@@ -12,7 +12,7 @@
 
 <body>
     {{-- @livewire('comments', ['comments' => 'I am Props']) --}}
-    <livewire:comments :initialComments="$comments" />
+    <livewire:comments initialComments="$comments" />
 
 
     @livewireScripts
